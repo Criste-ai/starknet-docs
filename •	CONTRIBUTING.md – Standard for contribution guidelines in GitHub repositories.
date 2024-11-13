@@ -1,0 +1,85 @@
+Starknet Documentation Repository
+
+[id=“readme”]
+
+<div align="center">
+
+
+// For information on these badges, visit https://shields.io/badges/
+
+[https://github.com/starknet-io/starknet-docs/issues]
+
+[https://docs.starknet.io]
+
+[https://t.me/+9VC94EQA8dY4ZTZh]
+
+</div>
+
+
+Overview
+
+The Starknet documentation website, docs.starknet.io, is written in AsciiDoc and built with Antora, a static site generator for AsciiDoc content.
+
+Contributing to Starknet Documentation
+
+Interested in contributing to Starknet documentation? Here’s how to get started.
+
+Question	Resource
+How do I contribute?	See Different ways to contribute.
+Are there guidelines?	Review our Documentation guidelines.
+Is there a style guide?	See the Starknet documentation style guide.
+How do I set up my environment?	Follow the instructions in Setting up your environment.
+
+Different Ways to Contribute
+
+You can contribute to Starknet documentation in a few ways:
+
+	•	Open an Issue: Report issues or suggest improvements on our GitHub Issues page.
+	•	Submit a Pull Request (PR): Clone the Starknet Docs repository, make your changes, and submit a PR. The Docs team will review your changes, add comments if needed, and help integrate your work.
+
+PR Review Process
+
+When you submit a PR, it’s reviewed by the Starknet Docs team. Additional technical reviews may be requested as necessary. Once approved and finalized, the PR is merged into the main repository and becomes part of the documentation.
+
+Authoring Tips
+
+For style and writing guidance, see the Starknet documentation style guide.
+
+To learn more about AsciiDoc, check these resources:
+
+	•	AsciiDoc Language Documentation
+	•	AsciiDoc Syntax Quick Reference
+
+	Note: Use explicit coding conventions to prioritize readability. For details, refer to AsciiDoc Mark-up Quick Reference for Red Hat Documentation.
+
+Getting Started
+
+	1.	Install Requirements: Make sure yarn and npx are installed.
+	2.	Clone the Repository: Clone this repo from starknet-io/starknet-docs or your fork.
+	3.	Set Up the Environment: In the starknet-docs directory, run:
+
+yarn
+
+This installs required modules and prepares your environment.
+
+Building and Previewing Content Locally
+
+To preview your changes:
+
+	1.	Build the Content: Run the following command to generate the site:
+
+./build_local_site.sh
+
+This outputs the site files in the public_html directory.
+
+	2.	Preview the Site:
+	•	Open <repo_root>/public_html/index.html in a browser.
+	•	Or use the Antora HTTP server:
+
+npx http-server public_html -c-1
+
+This provides a local URL, such as http://127.0.0.1:8080, where you can view the site.
+
+Releasing Starknet Docs (for Admins Only)
+
+Admins can release updates by merging changes into the main branch. A GitHub action will create a release tag and update CHANGELOG.md, then deploy the new content to docs.starknet.io.
